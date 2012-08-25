@@ -1,0 +1,1 @@
+Used by Yiiframework CAssetManager to publish application assets in order to make them publicly accessible.
