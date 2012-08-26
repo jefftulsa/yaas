@@ -32,13 +32,23 @@ common/lib/yii. When completed, ensure that common/lib/yii/framework/yii.php exi
 Deploy the development environment
 ----------------------------------
 ####copy development specific environment files from the env/development/ directory for each application
-$ cp -R backend/env/development/config/ backend/config/  
-$ cp -R backend/env/development/www/ backend/www/  
-$ cp -R frontend/env/development/config/ frontend/config/  
-$ cp -R frontend/env/development/www/ frontend/www/  
-$ cp -R console/env/development/config/ console/config/  
-$ cp -R console/env/development/yiic.php console/  
+1. Copy all files from *backend/env/development/config/* to *backend/config/*
+2. Copy all files from *backend/env/development/www/* to  *backend/www/*
+3. Copy all files from *frontend/env/development/config/* to *frontend/config/*
+4. Copy all files from *frontend/env/development/www/* to *frontend/www/*
+5. Copy all files from *console/env/development/config/* to *console/config/*
+6. Copy *console/env/development/yiic.php* to *console/*
+7  Copy all files from *common/env/development/config/* to *common/config/*
 
+$ cp -R backend/env/development/config/ backend/config/; cp -R backend/env/development/www/ backend/www/; cp -R frontend/env/development/config/ frontend/config/; cp -R frontend/env/development/www/ frontend/www/; cp -R console/env/development/config/ console/config/; cp -R console/env/development/yiic.php console/; cp -R common/env/development/config/params-local.php common/config/
+
+Ensure web server has read + write access to the following directories:
+-----------------------------------------------------------------------
+backend/runtime/  
+backend/www/assets/  
+console/runtime/  
+frontend/runtime/  
+frontend/www/assets/
 
 Setup Web Document Roots
 ------------------------
