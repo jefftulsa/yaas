@@ -17,7 +17,7 @@ Please read: http://www.yiiframework.com/wiki/155/the-directory-structure-of-the
 Quick Start
 ===========
 Download Yaas
---------------------
+-------------
 And unpack to a local directory of your choosing
 
 Install Yii
@@ -28,3 +28,29 @@ $ git clone https://github.com/yiisoft/yii.git yii
 
 or you can download the desired version of the framework and move the contents of framework/ over to
 common/lib/yii. When completed, ensure that common/lib/yii/framework/yii.php exists.
+
+Deploy the development environment - I.E. Copy over environment specific files
+------------------------------------------------------------------------------
+$ cp -R backend/env/development/config/ backend/config/
+$ cp -R backend/env/development/www/ backend/www/
+$ cp -R frontend/env/development/config/ frontend/config/
+$ cp -R frontend/env/development/www/ frontend/www/
+$ cp -R console/env/development/config/ console/config/
+$ cp -R console/env/development/yiic.php console/
+
+Setup Web Document Roots
+------------------------
+Ensure that /frontend/www/ is an application webroot and /backend/www/ is also a webroot. These represent the frontend (public-facing) and backend (admin) applications. If using Apache web-server, one approach would be to setup vhosts that point to these directories as webroots.
+E.G. 
+local.yaas.com -> frontend/www/ 
+and 
+local.admin.yaas.com -> backend/www 
+This way, if you visit http://local.yaas.com in your browser, it will run the index.php entry script at frontend/www/index.php. And similarly for the backend admin site.
+
+One Other Quick Config Change
+-----------------------------
+Now that you have your frontend hostname setup, change the frontend.url setting in common/config/params-local.php to to match your setting
+
+
+
+

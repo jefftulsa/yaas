@@ -18,6 +18,8 @@
 /frontend/www/robots.txt
 /backend/www/.htaccess
 /backend/www/robots.txt
+/backend/config/test.php
+/backend/www/index-test.php
 
 #yii framework files we don't need under our scm
 /common/lib/yii/

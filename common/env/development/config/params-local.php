@@ -6,9 +6,9 @@
  */
 return array(
 	// main DB connection configurations
-	'db.connectionString'=>'mysql:host=127.0.0.1;dbname=[YOUR-DEV-DB-NAME]',
-	'db.username'=>'[YOUR-DEV-DB-USERNAME]',
-	'db.password'=>'[YOUR-DEV-DB-PASSWORD]',
+	//'db.connectionString'=>'mysql:host=127.0.0.1;dbname=[YOUR-DEV-DB-NAME]',
+	//'db.username'=>'[YOUR-DEV-DB-USERNAME]',
+	//'db.password'=>'[YOUR-DEV-DB-PASSWORD]',
 	
 	'frontend.url'=>'http://[www.your-local-dev-site.com]',
 );
