@@ -29,14 +29,16 @@ $ git clone https://github.com/yiisoft/yii.git yii
 or you can download the desired version of the framework and move the contents of framework/ over to
 common/lib/yii. When completed, ensure that common/lib/yii/framework/yii.php exists.
 
-Deploy the development environment - I.E. Copy over environment specific files
-------------------------------------------------------------------------------
-$ cp -R backend/env/development/config/ backend/config/
-$ cp -R backend/env/development/www/ backend/www/
-$ cp -R frontend/env/development/config/ frontend/config/
-$ cp -R frontend/env/development/www/ frontend/www/
-$ cp -R console/env/development/config/ console/config/
-$ cp -R console/env/development/yiic.php console/
+Deploy the development environment
+----------------------------------
+####copy development specific environment files from the env/development/ directory for each application
+$ cp -R backend/env/development/config/ backend/config/  
+$ cp -R backend/env/development/www/ backend/www/  
+$ cp -R frontend/env/development/config/ frontend/config/  
+$ cp -R frontend/env/development/www/ frontend/www/  
+$ cp -R console/env/development/config/ console/config/  
+$ cp -R console/env/development/yiic.php console/  
+
 
 Setup Web Document Roots
 ------------------------
